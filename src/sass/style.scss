@@ -1,2 +1,9 @@
-@import "./partials/normalize.scss";
+@import "./partials/normalize";
+
+@import "./partials/variables";
+@import "./partials/typography";
+@import "./partials/global";
+
 @import "./partials/home";
+@import "./partials/search";
+@import "./partials/discover";

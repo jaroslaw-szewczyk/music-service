@@ -1,0 +1,25 @@
+h1, h2 {
+  text-transform: uppercase;
+  color: $main-text-color;
+  font-weight: $font-bold;
+  filter: drop-shadow(0 0 71px rgba(0,0,0,0.39));
+}
+
+h1 {
+  font-size: $main-header-size;
+  letter-spacing: $main-header-letter-spacing;
+}
+
+h2 {
+  font-size: $main-sub-header-size;
+  line-height: $main-sub-header-letter-height;
+  letter-spacing: $main-sub-header-letter-spacing;
+}
+
+
+// @media (max-width: 768px) {
+//     h1 {
+//         font-size: 70px;
+//         letter-spacing: 30px;
+//     }
+// }
