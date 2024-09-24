@@ -1,12 +1,15 @@
 body {
   font-family: $text-font;
   background-color: $main-site-color;
-
 }
 
 .wrapper {
   max-width: $web-size;
   margin: 0 auto;
+}
+
+a {
+  color: $second-text-color;
 }
 
 header {
@@ -16,7 +19,7 @@ header {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-    
+        
   &::after {
     content: "";
     position: absolute;
@@ -50,22 +53,39 @@ header {
   display: flex;
   justify-content: space-around;
   margin-top: 200px;
+  margin-bottom: 200px;
 
   a {
     font-size: $nav-font-size;
     letter-spacing: 2px;
     line-height: 27px;
     text-transform: uppercase;
-    color: $second-text-color;
     font-weight: $nav-font-weight;
     text-decoration: none;
-
+    
     &:hover {
       cursor: pointer;
       color: $main-text-color;
     }
   }
+}
 
+.test {
+  text-align: center;
+  display: none;
+
+  p {
+    color: #ffffff;
+    font-size: 80px;
+  }
+}
+
+.active {
+  display: block;
+}
+
+.active-nav {
+  color: $main-text-color;
 }
 
 // @media (max-width: 768px) {
