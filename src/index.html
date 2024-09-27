@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
@@ -26,17 +27,33 @@
             </div>
         </nav>
         <div id="pages">
-            <div class="test" id="home">
-                <p>HOME</p>
-            </div>
-            <div class="test" id="search">
+            <section class="basic-page-styles" id="home">
+                <div class="wrapper">
+                    <ul class="home-list"></ul>
+                </div>
+            </section>
+            <section class="basic-page-styles" id="search">
                 <p>SEARCH</p>
-            </div>
-            <div class="test" id="discover">
+            </section>
+            <section class="basic-page-styles" id="discover">
                 <p>DISCOVER</p>
-            </div>
+            </section>
         </div>
+
+        <script id="template-song" type="text/x-handlebars-template">
+            <li>
+                <h3 data-title="{{title}}">John Doe - {{title}}</h3>
+                <div class="gap-example">
+                    <audio src="./songs/{{filename}}"></audio>
+                </div>
+                <div class="li-text">
+                    <p>Categories: {{categories}}</p>
+                    <p>#{{ranking}} in the ranking</p>
+                </div>
+            </li>
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
         <script type="module" src="./js/app.js"></script>
     </body>
 </html>

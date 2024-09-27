@@ -1,4 +1,5 @@
 import { select, classNames } from './settings.js';
+import Song from './components/song.js';
 
 const app = {
 
@@ -54,8 +55,26 @@ const app = {
     }
   },
 
+  initData: function(){
+    this.data = {};
+    console.log('hello');
+  },
+
+  initSong: function(){
+    console.log(new Song('data'));
+  },
+
+  initAudio: function(){
+    // eslint-disable-next-line no-undef
+    new GreenAudioPlayer('.gap-example');
+  },
+
   init: function(){
+
     this.initPages();
+    this.initData();
+    this.initSong();
+    // this.initAudio();
   }
 };
 

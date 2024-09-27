@@ -1,4 +1,4 @@
-h1, h2 {
+h1, h2, h3 {
   text-transform: uppercase;
   color: $main-text-color;
   font-weight: $font-bold;
@@ -16,6 +16,13 @@ h2 {
   letter-spacing: $main-sub-header-letter-spacing;
 }
 
+
+h3 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 27px;
+  font-weight: 600;
+}
 
 // @media (max-width: 768px) {
 //     h1 {
