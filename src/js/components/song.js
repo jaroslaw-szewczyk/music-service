@@ -1,8 +1,9 @@
 class Song{
-  constructor(songData){
+  constructor(songId, songData){
     this.songData = songData;
+    this.id = songId;
 
-    console.log(this.songData);
+    console.log('Song: ',this);
   }
 }
 

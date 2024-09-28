@@ -1,5 +1,5 @@
-import { select, classNames } from './settings.js';
-import Song from './components/song.js';
+import { select, classNames, settings } from './settings.js';
+import Song from './components/Song.js';
 
 const app = {
 
@@ -55,13 +55,29 @@ const app = {
     }
   },
 
-  initData: function(){
-    this.data = {};
-    console.log('hello');
+  initSong: function(){
+    for(const song of this.data.songs){
+      new Song(song.id, song);
+    };
   },
 
-  initSong: function(){
-    console.log(new Song('data'));
+  initData: function(){
+    const thisApp = this;
+
+    thisApp.data = {};
+    
+    const url = settings.db.url + '/' + settings.db.songs;
+    
+    fetch(url)
+      .then(function(rawResponse){
+        return rawResponse.json();
+      })
+      .then(function(parsedResponse){
+        thisApp.data.songs = parsedResponse;
+        
+        thisApp.initSong();
+      });
+
   },
 
   initAudio: function(){
@@ -73,7 +89,6 @@ const app = {
 
     this.initPages();
     this.initData();
-    this.initSong();
     // this.initAudio();
   }
 };
