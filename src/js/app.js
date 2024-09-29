@@ -1,5 +1,6 @@
 import { select, classNames, settings } from './settings.js';
 import Song from './components/Song.js';
+import Player from './components/Player.js';
 
 const app = {
 
@@ -58,7 +59,8 @@ const app = {
   initSong: function(){
     for(const song of this.data.songs){
       new Song(song.id, song);
-    };
+    }
+    this.initPlayer();
   },
 
   initData: function(){
@@ -77,19 +79,17 @@ const app = {
         
         thisApp.initSong();
       });
-
   },
 
-  initAudio: function(){
-    // eslint-disable-next-line no-undef
-    new GreenAudioPlayer('.gap-example');
+  initPlayer: function(){
+    const songList = document.querySelector(select.audioPlayer.audioPlayerList);
+    new Player(songList);
   },
 
   init: function(){
 
     this.initPages();
     this.initData();
-    // this.initAudio();
   }
 };
 

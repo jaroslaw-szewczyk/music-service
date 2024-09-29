@@ -42,12 +42,16 @@
 
         <script id="template-song" type="text/x-handlebars-template">
             <li>
-                <h3 data-title="{{title}}">John Doe - {{title}}</h3>
+                <h3 data-title="{{title}}">{{author}} - {{title}}</h3>
                 <div class="gap-example">
                     <audio src="./songs/{{filename}}"></audio>
                 </div>
                 <div class="li-text">
-                    <p>Categories: {{categories}}</p>
+                    <p>Categories:
+                        {{#each categories}}
+                            {{this}}
+                        {{/each}}
+                    </p>
                     <p>#{{ranking}} in the ranking</p>
                 </div>
             </li>

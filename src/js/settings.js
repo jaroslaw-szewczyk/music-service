@@ -5,6 +5,12 @@ export const select = {
 
   containerOf: {
     pages: '#pages',
+    homeSongs: '#home div ul',
+  },
+
+  audioPlayer: {
+    greenAudioElement: '.gap-example',
+    audioPlayerList: '.home-list',
   },
 
   nav: {
