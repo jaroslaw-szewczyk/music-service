@@ -1,20 +1,18 @@
 import { select, templates } from '../settings.js';
 
 class Song{
-  constructor(songId, songData){
+  constructor(songData){
     this.songData = songData;
-    this.id = songId;
-
+    
     this.renderSong();
-    // this.initAudio();
   }
 
   renderSong(){
     const generatedHTML = templates.songView(this.songData);
 
-    const songContainer = document.querySelector(select.containerOf.homeSongs);
+    const songList = document.querySelector(select.audioPlayer.audioPlayerList);
 
-    songContainer.insertAdjacentHTML('beforeend', generatedHTML);
+    songList.insertAdjacentHTML('beforeend', generatedHTML);
   }
 }
 

@@ -29,24 +29,32 @@
         <div id="pages">
             <section class="basic-page-styles" id="home">
                 <div class="wrapper">
-                    <ul class="home-list"></ul>
+                    <ul id="home-list"></ul>
                 </div>
             </section>
             <section class="basic-page-styles" id="search">
                 <p>SEARCH</p>
             </section>
             <section class="basic-page-styles" id="discover">
-                <p>DISCOVER</p>
+                <div class="wrapper">
+                    <h2 class="discover-header">DISCOVER</h2>
+                    <p id="discover-p">Give it a try!</p>
+                    <div id="random-song-container" class="song-container"></div>
+                </div>
             </section>
         </div>
-
-        <script id="template-song" type="text/x-handlebars-template">
-            <li>
+        <footer>
+            <div class="wrapper">
+                <p>All rights reserved</p>
+            </div>
+        </footer>
+        <script id="template-home-songs" type="text/x-handlebars-template">
+            <li class="song-container">
                 <h3 data-title="{{title}}">{{author}} - {{title}}</h3>
                 <div class="gap-example">
                     <audio src="./songs/{{filename}}"></audio>
                 </div>
-                <div class="li-text">
+                <div class="song-text">
                     <p>Categories:
                         {{#each categories}}
                             {{this}}
@@ -56,6 +64,22 @@
                 </div>
             </li>
         </script>
+
+        <script id="template-random-songs" type="text/x-handlebars-template">
+            <h3 data-title="{{title}}">{{author}} - {{title}}</h3>
+            <div class="gap-example">
+                <audio src="./songs/{{filename}}"></audio>
+            </div>
+            <div class="song-text">
+                <p>Categories:
+                    {{#each categories}}
+                        {{this}}
+                    {{/each}}
+                </p>
+                <p>#{{ranking}} in the ranking</p>
+            </div>
+        </script>
+
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
         <script type="module" src="./js/app.js"></script>

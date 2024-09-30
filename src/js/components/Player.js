@@ -1,16 +1,13 @@
-import { select } from '../settings.js';
-
 class Player {
-  constructor(element) {
-    this.element = element;
-
+  constructor(selector) {
+    this.selector = selector;
     this.initPlayer();
   }
 
   initPlayer() {
     // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({
-      selector: select.audioPlayer.greenAudioElement,
+      selector: this.selector, // inits Green Audio Player on each audio container that matches the selector
       stopOthersOnPlay: true
     });
   }

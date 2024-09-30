@@ -1,16 +1,19 @@
 export const select = {
   templateOf: {
-    templateSong: '#template-song',
+    templateHomeSongs: '#template-home-songs',
+    templateRandomSongs: '#template-random-songs',
   },
 
   containerOf: {
     pages: '#pages',
     homeSongs: '#home div ul',
+    randomSongContainer: '#random-song-container',
   },
 
   audioPlayer: {
     greenAudioElement: '.gap-example',
-    audioPlayerList: '.home-list',
+    audioPlayerList: '#home-list',
+    randomSongContainer: '#random-song-container',
   },
 
   nav: {
@@ -37,5 +40,6 @@ export const settings = {
 
 
 export const templates = {
-  songView: Handlebars.compile(document.querySelector(select.templateOf.templateSong).innerHTML),
+  songView: Handlebars.compile(document.querySelector(select.templateOf.templateHomeSongs).innerHTML),
+  randomSongView: Handlebars.compile(document.querySelector(select.templateOf.templateRandomSongs).innerHTML),
 };

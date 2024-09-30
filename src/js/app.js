@@ -1,6 +1,7 @@
 import { select, classNames, settings } from './settings.js';
 import Song from './components/Song.js';
 import Player from './components/Player.js';
+import RandomSong from './components/RandomSong.js';
 
 const app = {
 
@@ -38,6 +39,7 @@ const app = {
 
       });
     }
+    console.log('initPages');
   },
 
   activatePage: function(pageId){
@@ -56,40 +58,53 @@ const app = {
     }
   },
 
+  //Creation of a Song class instance from data fetched from the server
   initSong: function(){
-    for(const song of this.data.songs){
-      new Song(song.id, song);
+    console.log(this.data);
+    for(const song of this.data){
+      new Song(song);
     }
-    this.initPlayer();
   },
 
+  //fetch data from the server
   initData: function(){
     const thisApp = this;
 
+    //Creating an empty data object
     thisApp.data = {};
     
+    //Assigning url to a variable
     const url = settings.db.url + '/' + settings.db.songs;
     
-    fetch(url)
+    //data request
+    return fetch(url)
       .then(function(rawResponse){
         return rawResponse.json();
       })
       .then(function(parsedResponse){
-        thisApp.data.songs = parsedResponse;
+        thisApp.data = parsedResponse;
         
+        //Assigning the size of an array to a variable
+        thisApp.numberOfSongs = parsedResponse.length;
+       
+        //Calling the initSong() function to start the audio player correctly
         thisApp.initSong();
+
+        //Calling the initSong() function to start the audio player correctly
+        thisApp.initRandom();
       });
   },
 
-  initPlayer: function(){
-    const songList = document.querySelector(select.audioPlayer.audioPlayerList);
-    new Player(songList);
+  initRandom: function(){
+    new RandomSong(this.numberOfSongs, this.data);
   },
 
   init: function(){
 
     this.initPages();
-    this.initData();
+    this.initData().then(() => {
+      new Player(select.audioPlayer.greenAudioElement);
+    });
   }
 };
 
