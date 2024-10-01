@@ -2,9 +2,10 @@ import { select, templates } from '../settings.js';
 
 
 class RandomSong{    
-  constructor(numberOfSongs, songsList){
+  constructor(numberOfSongs, songsList, discoverSection){
     this.numberOfSongs = numberOfSongs;
     this.songsList = songsList;
+    this.discoverSection = discoverSection;
     
     this.randomSong();
     this.renderSong();
@@ -20,7 +21,7 @@ class RandomSong{
 
     const generatedHTML = templates.randomSongView(this.randomSongData);
 
-    const discoverSong = document.querySelector(select.containerOf.randomSongContainer);
+    const discoverSong = this.discoverSection.querySelector(select.containerOf.randomSongContainer);
    
     discoverSong.innerHTML = generatedHTML;
   }

@@ -1,8 +1,9 @@
 import { select, templates } from '../settings.js';
 
 class Song{
-  constructor(songData){
+  constructor(songData, homeSection){
     this.songData = songData;
+    this.homeSection = homeSection;
     
     this.renderSong();
   }
@@ -10,8 +11,8 @@ class Song{
   renderSong(){
     const generatedHTML = templates.songView(this.songData);
 
-    const songList = document.querySelector(select.audioPlayer.audioPlayerList);
-
+    const songList = this.homeSection.querySelector(select.homeSection.audioPlayerList);
+    
     songList.insertAdjacentHTML('beforeend', generatedHTML);
   }
 }

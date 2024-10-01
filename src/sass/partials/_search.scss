@@ -1,0 +1,23 @@
+form {
+  label {
+    color: $second-text-color;
+  }
+
+  input {
+    border: none;
+    border-radius: 5px;
+    padding: $form-padding;
+  }
+
+  button {
+    border: none;
+    border-radius: 5px;
+    background-color: $second-site-color;
+    color: $main-text-color;
+    padding: $form-padding $second-form-padding;
+  }
+}
+
+#nr-of-songs-p, #no-song-found {
+  margin: $paragrap-margin 0;
+}

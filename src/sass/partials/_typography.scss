@@ -18,10 +18,16 @@ h2 {
 
 
 h3 {
-  font-size: 30px;
-  letter-spacing: 2px;
-  line-height: 27px;
-  font-weight: 600;
+  font-size: $medium-font-size;
+  letter-spacing: $small-letter-spacing;
+  line-height: $medium-line-height;
+  font-weight: $medium-font-weight;
+}
+
+.site-header {
+  font-size: $discover-header-size;
+  margin-bottom: 80px;
+  color: $second-text-color;    
 }
 
 // @media (max-width: 768px) {

@@ -2,6 +2,7 @@ import { select, classNames, settings } from './settings.js';
 import Song from './components/Song.js';
 import Player from './components/Player.js';
 import RandomSong from './components/RandomSong.js';
+import Search from './components/Search.js';
 
 const app = {
 
@@ -39,7 +40,6 @@ const app = {
 
       });
     }
-    console.log('initPages');
   },
 
   activatePage: function(pageId){
@@ -60,9 +60,10 @@ const app = {
 
   //Creation of a Song class instance from data fetched from the server
   initSong: function(){
-    console.log(this.data);
+    const homeSection = document.querySelector(select.homeSection.home);
+
     for(const song of this.data){
-      new Song(song);
+      new Song(song, homeSection);
     }
   },
 
@@ -92,11 +93,20 @@ const app = {
 
         //Calling the initSong() function to start the audio player correctly
         thisApp.initRandom();
+        thisApp.initSearch();
       });
   },
 
   initRandom: function(){
-    new RandomSong(this.numberOfSongs, this.data);
+    const discoverSection = document.querySelector(select.discoverSection.discover);
+
+    new RandomSong(this.numberOfSongs, this.data, discoverSection);
+  },
+
+  initSearch(){
+    const searchSection = document.querySelector(select.searchSection.search);
+
+    new Search(this.data, searchSection);
   },
 
   init: function(){

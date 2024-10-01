@@ -19,6 +19,7 @@ ul {
 
 li {
   list-style-type: none;
+  margin-bottom: $li-margin-bottom;
 }
 
 .song-container {
@@ -85,11 +86,11 @@ header {
   margin-bottom: 200px;
 
   a {
-    font-size: $nav-font-size;
-    letter-spacing: $nav-letter-spacing;
-    line-height: $nav-line-height;
+    font-size: $medium-font-size;
+    letter-spacing: $small-letter-spacing;
+    line-height: $medium-line-height;
     text-transform: uppercase;
-    font-weight: $nav-font-weight;
+    font-weight: $medium-font-weight;
     text-decoration: none;
     
     &:hover {
@@ -133,7 +134,7 @@ header {
 footer {
   text-align: center;
   color: $main-text-color;
-  padding: 25px;
+  padding: $footer-padding;
 }
 
 // @media (max-width: 768px) {

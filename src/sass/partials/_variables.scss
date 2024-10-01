@@ -8,6 +8,7 @@ $second-text-color: #bfbfbf;
 $text-font: "Source Code Pro", monospace;
 
 $font-bold: 900;
+$medium-font-weight: 600;
 
 //size;
 $header-wrapper-size: 1024px;
@@ -24,10 +25,20 @@ $main-sub-header-letter-height: 72px;
 $main-sub-header-mobile-size: 70px;
 $main-sub-header-mobile-letter-spacing: 30px;
 
-$nav-font-size: 30px;
-$nav-letter-spacing: 2px;
-$nav-line-height: 27px;
-$nav-font-weight: 600;
+$medium-font-size: 30px;
+$small-letter-spacing: 2px;
+$medium-line-height: 27px;
+
+//li
+$li-margin-bottom: 80px;
 
 //Discover
 $discover-header-size: 48px;
+
+//Search
+$form-padding: 10px;
+$second-form-padding: 20px;
+$paragrap-margin: 80px;
+
+//footer
+$footer-padding: 50px;

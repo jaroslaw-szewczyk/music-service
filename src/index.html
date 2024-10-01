@@ -33,11 +33,19 @@
                 </div>
             </section>
             <section class="basic-page-styles" id="search">
-                <p>SEARCH</p>
+                <div class="wrapper">
+                    <h2 class="site-header">SEARCH</h2>
+                    <form id="search-form">
+                        <label for="search">Search</label>
+                        <input type="text" id="search-input" name="name" >
+                        <button type="submit">Search</button>
+                    </form>
+                    <div id="serch-result"></div>
+                </div>
             </section>
             <section class="basic-page-styles" id="discover">
                 <div class="wrapper">
-                    <h2 class="discover-header">DISCOVER</h2>
+                    <h2 class="site-header">DISCOVER</h2>
                     <p id="discover-p">Give it a try!</p>
                     <div id="random-song-container" class="song-container"></div>
                 </div>
@@ -78,6 +86,32 @@
                 </p>
                 <p>#{{ranking}} in the ranking</p>
             </div>
+        </script>
+
+        <script id="search-song-template" type="text/x-handlebars-template">
+            {{#if songs}}
+                <p id="nr-of-songs-p">We have found {{length}} songs...</p>
+                <ul>
+                    {{#each songs}}
+                        <li class="song-container">
+                            <h3 data-title="{{title}}">{{author}} - {{title}}</h3>
+                            <div class="gap-example search-player">
+                                <audio src="./songs/{{filename}}"></audio>
+                            </div>
+                            <div class="song-text">
+                                <p>Categories:
+                                    {{#each categories}}
+                                        {{this}}
+                                    {{/each}}
+                                </p>
+                                <p>#{{ranking}} in the ranking</p>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{else}}
+                <p id="no-song-found">No songs found.</p>
+            {{/if}}
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>

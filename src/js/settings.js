@@ -2,6 +2,7 @@ export const select = {
   templateOf: {
     templateHomeSongs: '#template-home-songs',
     templateRandomSongs: '#template-random-songs',
+    templateSearch:'#search-song-template'
   },
 
   containerOf: {
@@ -12,13 +13,29 @@ export const select = {
 
   audioPlayer: {
     greenAudioElement: '.gap-example',
-    audioPlayerList: '#home-list',
     randomSongContainer: '#random-song-container',
+    searchAudioPlayer: '.search-player',
   },
 
   nav: {
     links: '.nav-wrapper a',
   },
+
+  homeSection: {
+    home: '#home',
+    audioPlayerList: '#home-list',
+  },
+
+  searchSection: {
+    search: '#search',
+    searchForm: '#search-form',
+    searchInput: '#search-input',
+    searchResult: '#serch-result',
+  },
+
+  discoverSection: {
+    discover: '#discover',
+  }
 };
 
 export const classNames = {
@@ -42,4 +59,5 @@ export const settings = {
 export const templates = {
   songView: Handlebars.compile(document.querySelector(select.templateOf.templateHomeSongs).innerHTML),
   randomSongView: Handlebars.compile(document.querySelector(select.templateOf.templateRandomSongs).innerHTML),
+  searchedSongs: Handlebars.compile(document.querySelector(select.templateOf.templateSearch).innerHTML),
 };
