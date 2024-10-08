@@ -3,6 +3,7 @@ import Song from './components/Song.js';
 import Player from './components/Player.js';
 import RandomSong from './components/RandomSong.js';
 import Search from './components/Search.js';
+import SideStyle from './components/SideStyle.js';
 
 const app = {
 
@@ -109,12 +110,18 @@ const app = {
     new Search(this.data, searchSection);
   },
 
+  initSideStyle() {
+    const element = document.querySelectorAll('.uppercase-text');
+    new SideStyle(element);
+  },
+
   init: function(){
 
     this.initPages();
     this.initData().then(() => {
       new Player(select.audioPlayer.greenAudioElement);
     });
+    this.initSideStyle();
   }
 };
 
