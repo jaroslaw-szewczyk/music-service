@@ -1,4 +1,12 @@
+/* Discover */
 #discover-p {
-  margin-bottom: 80px;
-  font-size: 24px;
+  margin-bottom: $discover-paragraph-margin-bottom;
+  font-size: $discover-font-size;
+}
+
+/* Stylizacja dla ekranów o szerokości mniejszej niż 576px */
+@media (max-width: 575px) {  
+  #discover-p {
+    font-size: $discover-font-size-mobile;
+  }
 }

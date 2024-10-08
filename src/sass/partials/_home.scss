@@ -1,0 +1,306 @@
+/* Home */
+.subscribe-background {
+  width: 100%;
+  height: $subscribe-background-height;
+  background-image: url('../../images/subscribe.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 200px;
+  position: relative;
+
+  .subscribe-header {
+    position: absolute;
+    top: -6.3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: $subscribe-header-font-size;
+    letter-spacing: $subscribe-header-letter-spacing;
+    line-height: $subscribe-header-line-height;
+    color: $main-text-color;
+    font-weight: $subscribe-header-font-weight;
+    width: 100%;
+
+    #span-subscribe-header {
+      font-weight: 900;
+    }
+  }
+
+  a {
+    display: inline-block;
+    background: $second-site-color;
+    font-size: $subscribe-button-font-size;
+    letter-spacing: 8px;
+    color: $main-text-color;
+    padding: $subscribe-button-padding;
+    border-radius: $subscribe-button-border-radius;
+    font-weight: $subscribe-button-font-weight;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+  }
+    
+  h2 {
+    font-size: $subscribe-header-font-size;
+    letter-spacing: $subscribe-header-letter-spacing;
+    line-height: $subscribe-header-line-height;
+    color: $main-text-color;
+    font-weight: 900;
+    position: absolute;
+    text-transform: none;
+    
+    span {
+      color: $second-site-color;
+    }
+  }
+
+  .name {
+    top: $subscribe-name-top;
+    left: $subscribe-name-left;
+  }
+
+  .surname {
+    top: $subscribe-surname-top;
+    left: $subscribe-surname-left;
+    z-index: 9;
+  }
+
+  .new-album {
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+       
+    h3 {
+      font-size: $new-album-header-font-size;
+      color: $second-text-color;
+      letter-spacing: 8px;
+      font-weight: 700;    
+    }
+
+    p {
+      font-size: $new-album-paragraph-font-size;
+      letter-spacing: $new-album-paragraph-letter-spacing;
+      font-weight: $new-album-paragraph-font-weight;
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .subscribe-background {
+    a {
+      left: $subscribe-button-left-small;
+    }  
+      
+    .name {
+      left: $subscribe-name-left-small;
+    }
+  }
+}
+
+@media (max-width: 1380px) and (min-width: 1200px) {
+  .subscribe-background {
+    a {
+      left: $subscribe-button-left-medium;
+      font-size: $subscribe-button-font-size-medium;
+    }  
+    
+    .name {
+      left: $subscribe-name-left-medium;
+    }
+
+    .surname {
+      left: $subscribe-surname-left-medium;
+    }
+
+    .new-album {
+      left: 40%;
+    }
+  }
+ 
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .subscribe-background {
+    .subscribe-header {
+      font-size: $subscribe-header-font-size-medium;
+      letter-spacing: $subscribe-header-letter-spacing-medium;
+      top: -5%;
+      width: 90%;
+      left: 47%;  
+    }
+
+    a {
+      font-size: $subscribe-button-font-size-small;
+      left: 5%;
+    }
+
+    .name {
+      top: $subscribe-name-top;
+      left: 30%;
+      font-size: $subscribe-name-font-size-medium;
+    }
+  
+    .surname {
+      top: $subscribe-surname-top;
+      left: 36%;
+      font-size: $subscribe-name-font-size-medium;
+    }
+  
+    .new-album {
+      p {
+        font-size: $new-album-paragraph-font-size-xs;
+        letter-spacing: $new-album-paragraph-letter-spacing-xs;
+        font-weight: $new-album-paragraph-font-weight;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .subscribe-background {
+    .subscribe-header {
+      font-size: $subscribe-header-font-size-small;
+      letter-spacing: $subscribe-header-letter-spacing-small;
+      top: -4.5%;
+      margin-left: 0;
+    }
+
+    a {
+      font-size: $subscribe-button-font-size-small;
+      top: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .name, .surname {
+      top: 7%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: $subscribe-name-font-size-medium;
+    }
+  
+    .surname {
+      top: 14%;
+      font-size: $subscribe-name-font-size-medium;
+    }
+  
+    .new-album {
+      top: 45%;
+      left: 21%;
+
+      p {
+        font-size: $new-album-paragraph-font-size-xs;
+        letter-spacing: $new-album-paragraph-letter-spacing-xs;
+        font-weight: $new-album-paragraph-font-weight;
+      }
+    }
+  }
+}
+
+/* Ekrany od 576px do 767px */
+@media (max-width: 767px) and (min-width: 576px) {
+  .subscribe-background {
+    .subscribe-header {
+      font-size: $subscribe-header-font-size-small;
+      letter-spacing: $subscribe-header-letter-spacing-xs;
+      top: -4.5%;
+      margin-left: 0;
+    }
+
+    a {
+      font-size: $subscribe-button-font-size-xs;
+      top: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .name, .surname {
+      top: 7%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: $subscribe-name-font-size-xs;
+    }
+  
+    .surname {
+      top: 14%;
+      font-size: $subscribe-name-font-size-xs;
+    }
+  
+    .new-album {
+      top: 45%;
+      left: 8%;
+
+      p {
+        font-size: $new-album-paragraph-font-size-xs;
+        letter-spacing: $new-album-paragraph-letter-spacing-xs;
+        font-weight: $new-album-paragraph-font-weight;
+      }
+    }
+  }
+}
+
+/* Ekrany mniejsze niż 576px */
+@media (max-width: 575px) {
+  .subscribe-background {
+    .subscribe-header {
+      font-size: $subscribe-header-font-size-xs;
+      letter-spacing: 0;
+      top: -3%;
+      margin-left: 0;
+    }
+
+    a {
+      font-size: $subscribe-button-font-size-xs;
+      top: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .name, .surname {
+      top: 7%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: $subscribe-name-font-size-xs;
+    }
+  
+    .surname {
+      top: 14%;
+      font-size: $subscribe-name-font-size-xs;
+    }
+  
+    .new-album {
+      top: 50%;
+      left: 8%;
+      text-align: center;
+
+      .subscribe-img-container {
+        width: 90%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      h3 {
+        letter-spacing: 2px;
+      }
+
+      p {
+        font-size: $new-album-paragraph-font-size-xs;
+        letter-spacing: $new-album-paragraph-letter-spacing-xs;
+        font-weight: $new-album-paragraph-font-weight;
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .subscribe-background {
+    .name, .surname {
+      letter-spacing: 8px;
+    }
+  }
+}

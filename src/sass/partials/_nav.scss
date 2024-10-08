@@ -1,0 +1,57 @@
+/* Nav */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+  a {
+    font-size: $medium-font-size;
+    letter-spacing: $small-letter-spacing;
+    line-height: $medium-line-height;
+    text-transform: uppercase;
+    font-weight: $medium-font-weight;
+    text-decoration: none;
+    
+    &:hover {
+      cursor: pointer;
+      color: $main-text-color;
+    }
+  }
+}
+
+
+/*Tablety i małe urządzenia mobilne w poziomie*/
+@media (max-width: 991px) and (min-width: 768px){  
+  .nav-wrapper {
+    justify-content: space-around;
+    margin: 100px 0;
+      
+    a {
+      font-size: 24px;
+    }
+  }
+}
+
+/*Dla ekranów od 576px do 767.98px*/
+@media (max-width: 767px) and (min-width: 576px) {
+  .nav-wrapper {
+    justify-content: space-around;
+    margin: 100px 0;
+      
+    a {
+      font-size: 24px;
+    }
+  }
+}
+/* Stylizacja dla ekranów o szerokości mniejszej niż 576px */
+@media (max-width: 575px) {
+  .nav-wrapper {
+    justify-content: space-around;
+    margin: 100px 0;
+      
+    a {
+      font-size: 16px;
+    }
+  }
+}

@@ -4,41 +4,107 @@ $second-site-color: #cf383e;
 $main-text-color: #fff;
 $second-text-color: #bfbfbf;
 
-//fonts 
+// Fonts
 $text-font: "Source Code Pro", monospace;
-
 $font-bold: 900;
 $medium-font-weight: 600;
 
-//size;
+// Sizes
 $header-wrapper-size: 1024px;
 $web-size: 750px;
 
 $main-header-size: 200px;
 $main-header-letter-spacing: 120px;
 $main-header-mobile-size: 70px;
+$main-header-mobile-size-sx: 65px;
 $main-header-mobile-letter-spacing: 30px;
+$main-header-mobile-letter-spacing-xs: 20px;
 
 $main-sub-header-size: 36px;
 $main-sub-header-letter-spacing: 11px;
 $main-sub-header-letter-height: 72px;
 $main-sub-header-mobile-size: 70px;
+$main-sub-header-mobile-size-xs: 24px;
 $main-sub-header-mobile-letter-spacing: 30px;
 
 $medium-font-size: 30px;
 $small-letter-spacing: 2px;
 $medium-line-height: 27px;
 
-//li
+// li
 $li-margin-bottom: 80px;
 
-//Discover
+// Discover
 $discover-header-size: 48px;
+$discover-paragraph-font-size: 24px;
+$discover-paragraph-margin-bottom: 80px;
+$discover-font-size-mobile: 20px;
+$discover-font-size: 24px;
 
-//Search
+// Search
 $form-padding: 10px;
 $second-form-padding: 20px;
-$paragrap-margin: 80px;
+$paragraph-margin: 80px;
 
-//footer
-$footer-padding: 50px;
+// Footer
+$footer-padding: 25px;
+
+// Subscribe Section
+$subscribe-background-height: 1300px;
+$subscribe-header-font-size: 100px;
+$subscribe-header-letter-spacing: 20px;
+$subscribe-header-line-height: 27px;
+$subscribe-header-font-weight: 600;
+$subscribe-button-font-size: 40px;
+$subscribe-button-padding: 25px;
+$subscribe-button-border-radius: 5px;
+$subscribe-button-font-weight: 700;
+
+// Responsive sizes for Subscribe Section
+$subscribe-header-font-size-medium: 80px;
+$subscribe-header-font-size-small: 65px;
+$subscribe-header-font-size-xs: 40px;
+
+$subscribe-header-letter-spacing-medium: 15px;
+$subscribe-header-letter-spacing-small: 5px;
+$subscribe-header-letter-spacing-xs: 0px;
+
+$subscribe-button-font-size-medium: 30px;
+$subscribe-button-font-size-small: 24px;
+$subscribe-button-font-size-xs: 24px;
+
+// Name & Surname Positioning
+$subscribe-name-top: 40%;
+$subscribe-name-left: 45%;
+$subscribe-surname-top: 46%;
+$subscribe-surname-left: 49%;
+$subscribe-name-font-size-medium: 70px;
+$subscribe-name-font-size-xs: 70px;
+
+// New Album Section
+$new-album-header-font-size: 40px;
+$new-album-paragraph-font-size: 24px;
+$new-album-paragraph-letter-spacing: 8px;
+$new-album-paragraph-font-weight: 700;
+
+// Breakpoints for New Album
+$new-album-paragraph-font-size-xs: 24px;
+$new-album-paragraph-letter-spacing-xs: 2px;
+$new-album-header-letter-spacing-xs: 2px;
+
+// Additional Responsive Adjustments
+$subscribe-button-left-small: 15%;
+$subscribe-button-left-medium: 7%;
+$subscribe-name-left-medium: 32%;
+$subscribe-surname-left-medium: 38%;
+$subscribe-name-left-small: 43%;
+$subscribe-name-left-xs: 50%;
+$subscribe-h2-font-size-small: 65px;
+$mobile-site-header-size: 40px;
+
+// Rozmiary tekstu
+$song-text-letter-spacing: 2px;
+$song-text-line-height: 27px;
+$song-text-font-size: 16px;
+$song-text-font-size-sm: 12px;
+$song-text-font-size-xs: 10px; 

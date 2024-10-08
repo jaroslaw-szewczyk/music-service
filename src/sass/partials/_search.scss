@@ -1,3 +1,4 @@
+/* Search */
 form {
   label {
     color: $second-text-color;
@@ -19,5 +20,23 @@ form {
 }
 
 #nr-of-songs-p, #no-song-found {
-  margin: $paragrap-margin 0;
+  margin: $paragraph-margin 0;
+}
+
+/* Stylizacja dla ekranów o szerokości mniejszej niż 576px */
+@media (max-width: 575px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 60%;
+      margin: 15px 0;
+    }
+
+    button {
+      width: 60%;
+    }
+  }
 }

@@ -1,3 +1,4 @@
+/* Global */
 body {
   font-family: $text-font;
   background-color: $main-site-color;
@@ -22,9 +23,28 @@ li {
   margin-bottom: $li-margin-bottom;
 }
 
+.basic-page-styles {
+  text-align: center;
+  display: none;
+
+  p {
+    color: $main-text-color;
+  }
+}
+
+/* Klasa dodawana przy zmianie podstrony */
+.active {
+  display: block; 
+}
+
+/* Klasa dodawana przy nawigacji */
+.active-nav {
+  color: $main-text-color;
+}
+
+/* Style dla utworu na każdej podstronie */
 .song-container {
   text-align: center;
-  
   color: $main-text-color;
   
   .song-text {
@@ -34,89 +54,15 @@ li {
     justify-content: space-between;
 
     p {
-      font-size: 16px;
-      letter-spacing: 2px;
-      line-height: 27px;
+      font-size: $song-text-font-size;
+      letter-spacing: $song-text-letter-spacing;
+      line-height: $song-text-line-height;
       color: $second-text-color;
     }
   }
 }
 
-header {
-  background-image: url('../../images/background.jpg');
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-        
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      $main-site-color 100%
-    );
-  }
-
-  .header-wrapper {
-    max-width: $header-wrapper-size;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-
-    .header-text {
-      text-align: center;
-    }
-  }
-}
-
-
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 200px;
-  margin-bottom: 200px;
-
-  a {
-    font-size: $medium-font-size;
-    letter-spacing: $small-letter-spacing;
-    line-height: $medium-line-height;
-    text-transform: uppercase;
-    font-weight: $medium-font-weight;
-    text-decoration: none;
-    
-    &:hover {
-      cursor: pointer;
-      color: $main-text-color;
-    }
-  }
-}
-
-.basic-page-styles {
-  text-align: center;
-  display: none;
-
-  p {
-    color: #ffffff;
-  }
-}
-
-.active {
-  display: block; 
-}
-
-.active-nav {
-  color: $main-text-color;
-}
-
+/* Style dla odtwarzacza audio na każdej podstronie */
 .green-audio-player {
   margin: 0 auto;
   width: 90%;
@@ -128,18 +74,33 @@ header {
       }
     }
   } 
-} 
-
-//footer
-footer {
-  text-align: center;
-  color: $main-text-color;
-  padding: $footer-padding;
 }
 
-// @media (max-width: 768px) {
-//     header {
-//        background-repeat: no-repeat;
-//        background-position: center;
-//     }
-// }
+/* Ekrany od 576px do 767.98px */
+@media (max-width: 767px) and (min-width: 576px) {
+  .song-container {
+    .song-text {
+      width: 70%;
+
+      p {
+        font-size: $song-text-font-size-sm;
+      }
+    }
+  }
+
+  .green-audio-player {
+    width: 70%;
+  }
+}
+
+/* Stylizacja dla ekranów o szerokości mniejszej niż 576px */
+@media (max-width: 575px) {
+  .song-container {
+    .song-text {
+      p {
+        font-size: $song-text-font-size-xs;
+        letter-spacing: 0;
+      }
+    }
+  } 
+}
