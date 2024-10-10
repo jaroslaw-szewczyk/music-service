@@ -50,7 +50,7 @@ export const classNames = {
 
 export const settings = {
   db: { 
-    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
+    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ':3000'),
     songs: 'songs',
   },
 };
