@@ -9,8 +9,8 @@ A simple frontend music player built using Vanilla JavaScript, SCSS, and Handleb
 - HTML5 + SCSS
 - Vanilla JavaScript
 - Handlebars 
-- [json-server](https://github.com/typicode/json-server)
-- [BrowserSync](https://browsersync.io/)
+- json-server
+- BrowserSync
 - ESLint + Stylelint – code analysis
 
 ## 🚀 How to Run the Project
